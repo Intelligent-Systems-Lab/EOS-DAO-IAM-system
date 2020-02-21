@@ -1,1 +1,1 @@
-# EOS-DAO-IAM-systyem
+# EOS-DAO-IAM-system
