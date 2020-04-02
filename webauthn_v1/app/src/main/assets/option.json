@@ -24,7 +24,8 @@
             "name": "testuser",
             "displayName": "Test User",
             "id": "/QIAAAAAAAAAAA==" // base64
-        }
+        },
+        "Timeout": 1000
     },
 
     "Login": 

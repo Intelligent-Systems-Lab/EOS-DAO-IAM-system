@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.hardware.biometrics.BiometricPrompt;
+//import android.hardware.biometrics.BiometricPrompt;
 
 import android.os.Bundle;
 import android.os.CancellationSignal;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     AuthenticatorGetAssertionOptions getAssertionOptions;
     BiometricPromptCompat mBiometricPrompt;
     CancellationSignal mCancellationSignal;
-    BiometricPrompt.AuthenticationCallback mAuthenticationCallback;
+    //BiometricPrompt.AuthenticationCallback mAuthenticationCallback;
 
     JSONObject obj;
     byte[] attestationObjectBytes;
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(MainActivity.ACTIVITY_TAG, ">>>>REG<<<<");
                 //mBiometricPrompt.authenticate(mCancellationSignal, myCallback);
                 reg();
+                Toast.makeText(context, "REG done", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(MainActivity.ACTIVITY_TAG, ">>>>LOG<<<<");
                 login();
+                Toast.makeText(context, "LOG done", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -107,12 +109,8 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        //Log.d(MainActivity.ACTIVITY_TAG, ">>>OPEN.");
-
         try {
-            //og.d(MainActivity.ACTIVITY_TAG, ">>>TRY.");
             makeCredentialOptions = AuthenticatorMakeCredentialOptions.fromJSON(obj.getString("Registration"));
-            //AuthenticatorMakeCredentialOptions makeCredentialOptions = AuthenticatorMakeCredentialOptions.fromJSON();
 
             attestationObject = authenticator.makeCredential(makeCredentialOptions);
             // or if you want to require user verification and need the biometric dialog:
