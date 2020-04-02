@@ -1,0 +1,2 @@
+rootProject.name='webauthn_v1'
+include ':app', ':android-webauthn-authenticator'

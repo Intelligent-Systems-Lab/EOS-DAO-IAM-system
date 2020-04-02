@@ -1,0 +1,42 @@
+{
+    "Registration":
+    {
+        "authenticatorExtensions": "", // optional and currently ignored
+        "clientDataHash": "LTCT/hWLtJenIgi0oUhkJz7dE8ng+pej+i6YI1QQu60=", // base64
+        "credTypesAndPubKeyAlgs": [
+            ["public-key", -7]
+        ],
+        "excludeCredentials": [
+            {
+                "type": "public-key",
+                "id": "lVGyXHwz6vdYignKyctbkIkJto/ADbYbHhE7+ss/87o=" // base64
+                // "transports" member optional but ignored
+            }
+        ],
+        "requireResidentKey": true,
+        "requireUserPresence": false,
+        "requireUserVerification": true,
+        "rp": {
+            "name": "webauthn.io",
+            "id": "webauthn.io"
+        },
+        "user": {
+            "name": "testuser",
+            "displayName": "Test User",
+            "id": "/QIAAAAAAAAAAA==" // base64
+        }
+    },
+
+    "Login": 
+    {
+        "allowCredentialDescriptorList": [{
+            "id": "jVtTOKLHRMN17I66w48XWuJadCitXg0xZKaZvHdtW6RDCJhxO6Cfff9qbYnZiMQ1pl8CzPkXcXEHwpQYFknN2w==", // base64
+            "type": "public-key"
+        }],
+        "authenticatorExtensions": "", // optional and ignored
+        "clientDataHash": "BWlg/oAqeIhMHkGAo10C3sf4U/sy0IohfKB0OlcfHHU=", // base64
+        "requireUserPresence": true,
+        "requireUserVerification": false,
+        "rpId": "webauthn.io"
+    }
+}

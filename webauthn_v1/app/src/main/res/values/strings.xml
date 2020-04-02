@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">webauthn_v1</string>
+    <string name="option">
+        {
+    "authenticatorExtensions": "", // optional and currently ignored
+    "clientDataHash": "LTCT/hWLtJenIgi0oUhkJz7dE8ng+pej+i6YI1QQu60=", // base64
+    "credTypesAndPubKeyAlgs": [
+        ["public-key", -7]
+    ],
+    "excludeCredentials": [
+        {
+            "type": "public-key",
+            "id": "lVGyXHwz6vdYignKyctbkIkJto/ADbYbHhE7+ss/87o=" // base64
+            // "transports" member optional but ignored
+        }
+    ],
+    "requireResidentKey": true,
+    "requireUserPresence": false,
+    "requireUserVerification": true,
+    "rp": {
+        "name": "webauthn.io",
+        "id": "webauthn.io"
+    },
+    "user": {
+        "name": "testuser",
+        "displayName": "Test User",
+        "id": "/QIAAAAAAAAAAA==" // base64
+    }
+}
+    </string>
+</resources>
